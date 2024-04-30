@@ -1,12 +1,30 @@
-
-
-```html
+<html>
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hall of Fame - Tippsieger</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .green-dot {
+            color: green;
+        }
+    </style>
 </head>
 <body>
 
@@ -26,7 +44,7 @@
             <tbody>
                 <tr>
                     <td>2023</td>
-                    <td>Aaron/Emilian</td>
+                    <td>Aaron</td>
                     <td>🏆</td>
                 </tr>
                 <tr>
@@ -67,8 +85,38 @@
                 <!-- Weitere Einträge für andere Jahre -->
             </tbody>
         </table>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rekordsieger</th>
+                    <th>Anzahl Siege</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="green-dot">&#9679;</span> Aaron</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td><span class="green-dot">&#9679;</span> Jonathan</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td><span class="green-dot">&#9679;</span> Titus</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><span class="green-dot">&#9679;</span> Noa</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><span class="green-dot">&#9679;</span> Emilian</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
     </main>
 
 </body>
 </html>
-```
