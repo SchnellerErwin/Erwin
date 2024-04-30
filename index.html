@@ -1,3 +1,5 @@
+
+
 <html>
 <!DOCTYPE html>
 <html lang="de">
@@ -8,10 +10,21 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 50px;
+        }
+        a {
+            text-decoration: none;
+            color: blue;
+            font-size: 20px;
+            margin: 20px;
         }
         table {
             border-collapse: collapse;
             width: 100%;
+            margin-top: 20px;
         }
         th, td {
             padding: 8px;
@@ -29,10 +42,14 @@
 <body>
 
     <header>
-        <h1>Hall of Fame - Tippsieger</h1>
+        <h1>Hall of Fame</h1>
     </header>
 
     <main>
+        <a href="#tippsieger">Tippsieger</a>
+        <a href="#rekordsieger">Rekordsieger</a>
+
+        <h2 id="tippsieger">Tippsieger</h2>
         <table>
             <thead>
                 <tr>
@@ -82,10 +99,10 @@
                     <td>Aaron</td>
                     <td>🏆</td>
                 </tr>
-                <!-- Weitere Einträge für andere Jahre -->
             </tbody>
         </table>
-        <br>
+
+        <h2 id="rekordsieger">Rekordsieger</h2>
         <table>
             <thead>
                 <tr>
