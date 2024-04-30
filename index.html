@@ -1,4 +1,5 @@
 
+
 <html>
 <!DOCTYPE html>
 <html lang="de">
@@ -19,6 +20,7 @@
             background-color: #343a40;
             color: #fff;
             padding: 20px 0;
+            text-align: center;
         }
         h1 {
             margin: 0;
@@ -28,21 +30,10 @@
             padding: 20px;
             text-align: center;
         }
-        a {
-            text-decoration: none;
-            color: #007bff;
-            font-size: 20px;
-            margin: 20px;
-            transition: color 0.3s ease;
-        }
-        a:hover {
-            color: #0056b3;
-        }
         table {
-            display: none;
             border-collapse: collapse;
-            width: 100%;
-            margin-top: 20px;
+            width: 70%;
+            margin: 20px auto;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -56,13 +47,8 @@
             background-color: #343a40;
             color: #fff;
         }
-        input[type="text"] {
-            padding: 8px;
-            margin-top: 20px;
-            width: 200px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+        .highlight {
+            color: green;
         }
     </style>
 </head>
@@ -73,11 +59,6 @@
     </header>
 
     <main>
-        <a href="#tippsieger">Tippsieger</a>
-        <a href="#rekordsieger">Rekordsieger</a>
-
-        <h2 id="tippsieger">Tippsieger</h2>
-        <input type="text" id="searchTippsieger" placeholder="Suche Tippsieger...">
         <table id="tippsieger-table">
             <thead>
                 <tr>
@@ -90,48 +71,46 @@
                 <tr>
                     <td>2023</td>
                     <td>Aaron/Emilian</td>
-                    <td>🏆</td>
+                    <td class="highlight">🏆</td>
                 </tr>
                 <tr>
                     <td>2022</td>
                     <td>Titus</td>
-                    <td>🏆</td>
+                    <td class="highlight">🏆</td>
                 </tr>
                 <tr>
                     <td>2021</td>
                     <td>Aaron</td>
-                    <td>🏆</td>
+                    <td class="highlight">🏆</td>
                 </tr>
                 <tr>
                     <td>2020</td>
                     <td>Jonathan</td>
-                    <td>🏆</td>
+                    <td class="highlight">🏆</td>
                 </tr>
                 <tr>
                     <td>2019</td>
                     <td>Jonathan</td>
-                    <td>🏆</td>
+                    <td class="highlight">🏆</td>
                 </tr>
                 <tr>
                     <td>2018</td>
                     <td>Noa</td>
-                    <td>🏆</td>
+                    <td class="highlight">🏆</td>
                 </tr>
                 <tr>
                     <td>2017</td>
                     <td>Aaron</td>
-                    <td>🏆</td>
+                    <td class="highlight">🏆</td>
                 </tr>
                 <tr>
                     <td>2016</td>
                     <td>Aaron</td>
-                    <td>🏆</td>
+                    <td class="highlight">🏆</td>
                 </tr>
             </tbody>
         </table>
 
-        <h2 id="rekordsieger">Rekordsieger</h2>
-        <input type="text" id="searchRekordsieger" placeholder="Suche Rekordsieger...">
         <table id="rekordsieger-table">
             <thead>
                 <tr>
@@ -141,61 +120,28 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><span style="color: green;">&#9679;</span> Aaron</td>
-                    <td>4</td>
+                    <td>Aaron</td>
+                    <td class="highlight">4</td>
                 </tr>
                 <tr>
-                    <td><span style="color: green;">&#9679;</span> Jonathan</td>
-                    <td>2</td>
+                    <td>Jonathan</td>
+                    <td class="highlight">2</td>
                 </tr>
                 <tr>
-                    <td><span style="color: green;">&#9679;</span> Titus</td>
-                    <td>1</td>
+                    <td>Titus</td>
+                    <td class="highlight">1</td>
                 </tr>
                 <tr>
-                    <td><span style="color: green;">&#9679;</span> Noa</td>
-                    <td>1</td>
+                    <td>Noa</td>
+                    <td class="highlight">1</td>
                 </tr>
                 <tr>
-                    <td><span style="color: green;">&#9679;</span> Emilian</td>
-                    <td>1</td>
+                    <td>Emilian</td>
+                    <td class="highlight">1</td>
                 </tr>
             </tbody>
         </table>
     </main>
 
-    <script>
-        // Funktion zum Einblenden der Tabellen bei Klick auf die Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                const target = document.querySelector(this.getAttribute('href'));
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Funktion zum Durchsuchen der Tippsieger-Tabelle
-        const searchTippsieger = document.getElementById('searchTippsieger');
-        searchTippsieger.addEventListener('input', function() {
-            const searchValue = this.value.toLowerCase();
-            const rows = document.querySelectorAll('#tippsieger-table tbody tr');
-
-            rows.forEach(row => {
-                const tippieger = row.children[1].textContent.toLowerCase();
-                if (tippieger.includes(searchValue)) {
-                    row.style.display = '';
-                } else {
-                    row.style.display = 'none';
-                }
-            });
-        });
-
-        // Funktion zum Durchsuchen der Rekordsieger-Tabelle
-        const searchRekordsieger = document.getElementById('searchRekordsieger');
-        searchRekordsieger.addEventListener('input', function() {
-            const searchValue = this.value.toLowerCase();
-            const rows
- </html>           
+</body>
+</html>
